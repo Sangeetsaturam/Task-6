@@ -1,0 +1,20 @@
+// Write a JavaScript function to get the current date
+// Note : Pass a separator as an argument.
+
+var currday = function(sep){
+    today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; 
+    var yyyy = today.getFullYear();
+    
+    if(dd<10) dd='0'+dd;
+    if(mm<10) mm='0'+mm;
+    return (mm+sep+dd+sep+yyyy);
+    };
+    console.log("the current date is:",currday('/'));
+    console.log("the current date is:",currday('-'));
+
+    // output:
+    // the current date is: 12/29/2021
+    // the current date is: 12-29-2021
+    
